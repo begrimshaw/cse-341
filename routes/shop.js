@@ -9,8 +9,10 @@ const adminData = require('./admin'); //imports admin.js where we have exported 
 const router = express.Router();
 
 router.get('/', (req, res, next) => {
-  console.log(adminData.products);
-  res.sendFile(path.join(rootDir, 'views', 'shop.html'));
+  const products = adminData.products; //take products out of adminData
+  res.render('shop', {prods: products, pageTitle: 'Shop', path: '/'}); //don't need shop.pug because pug is "view engine"- 'pug'
+                                          // products is being passed in with the key of prods
+                                        
 });
 
 module.exports = router;
