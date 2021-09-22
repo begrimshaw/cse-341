@@ -10,7 +10,13 @@ const router = express.Router();
 
 router.get('/', (req, res, next) => {
   const products = adminData.products; //take products out of adminData
-  res.render('shop', {prods: products, pageTitle: 'Shop', path: '/'}); //don't need shop.pug because pug is "view engine"- 'pug'
+  res.render('shop',
+   {prods: products, 
+    pageTitle: 'Shop', 
+    path: '/', 
+    hasProducts: products.length > 0,
+    activeShop: true,
+    productCSS: true}); //don't need shop.pug because pug is "view engine"- 'pug'
                                           // products is being passed in with the key of prods
                                         
 });
