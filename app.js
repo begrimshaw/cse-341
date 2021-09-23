@@ -7,10 +7,11 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', 'views'); //sets the folder to fine the view engine. 
 
-const adminData = require('./routes/admin');
+const adminData = require('./routes/admin'); // getting routes and products. 
 const shopRoutes = require('./routes/shop');
 
 app.use(express.urlencoded({extended:false}));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/admin', adminData.routes);
