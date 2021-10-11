@@ -7,6 +7,8 @@ const mongoose = require('mongoose');
 const errorController = require('./controllers/error');
 const User = require('./models/user')
 
+const PORT = process.env.PORT || 3000
+
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -65,7 +67,7 @@ mongoose
             }
         });
 
-        app.listen(3000)
+        app.listen(PORT)
     })
     .catch(err => {
         console.log(err);
