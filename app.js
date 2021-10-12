@@ -47,9 +47,11 @@ const MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://brennenAccess:123p
   app.use(cors(corsOptions));
   
   const options = {
-      useUnifiedTopology: true,
-      useNewUrlParser: true,
-      family: 4
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+    family: 4
   };
 mongoose
     .connect(MONGODB_URL, options )
