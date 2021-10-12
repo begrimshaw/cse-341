@@ -49,9 +49,7 @@ const MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://brennenAccess:123p
   const options = {
     useUnifiedTopology: true,
     useNewUrlParser: true,
-    //these two break the code
-    // useCreateIndex: true,
-    // useFindAndModify: false,
+
     family: 4
   };
 mongoose
