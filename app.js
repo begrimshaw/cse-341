@@ -50,8 +50,8 @@ const MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://brennenAccess:123p
     useUnifiedTopology: true,
     useNewUrlParser: true,
     //next two need to be eliminated when not in heroku
-    useCreateIndex: true,
-    useFindAndModify: false,
+    // useCreateIndex: true,
+    // useFindAndModify: false,
     family: 4
   };
 mongoose
