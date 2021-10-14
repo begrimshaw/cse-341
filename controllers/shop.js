@@ -25,7 +25,7 @@ exports.getProduct = (req, res, next) => {
       res.render('shop/product-detail', {
         product: product,
         pageTitle: product.title,
-        path: '/products'
+        path: '/products' 
       });
     })
     .catch(err => console.log(err));
@@ -38,7 +38,7 @@ exports.getIndex = (req, res, next) => {
         prods: products,
         pageTitle: 'Shop',
         path: '/'
-      });
+      }); 
     })
     .catch(err => {
       console.log(err);
@@ -94,8 +94,8 @@ exports.postOrder = (req, res, next) => {
       });
       const order = new Order({
         user: {
-          name: req.user.name,
-          userId: req.user._id
+          email: req.user.email,
+          userId: req.user._id 
         },
         products: products        
       });
