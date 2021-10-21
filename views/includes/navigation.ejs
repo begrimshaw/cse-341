@@ -16,7 +16,6 @@
                 <li class="main-header__item">
                     <a class="<%= path === '/orders' ? 'active' : '' %>" href="/orders">Orders</a>
                 </li>
-                <!-- Render if user is authenticated -->
                 <li class="main-header__item">
                     <a class="<%= path === '/admin/add-product' ? 'active' : '' %>" href="/admin/add-product">Add Product
                     </a>
@@ -27,7 +26,6 @@
                 </li>
             <% } %>
         </ul>
-
         <ul class="main-header__item-list">
             <% if (!isAuthenticated) { %>
                 <li class="main-header__item">
@@ -38,14 +36,13 @@
                 </li>
             <% } else { %>
                 <li class="main-header__item">
-                    <form action="/logout" method="POST">
+                    <form action="/logout" method="post">
                         <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-                        <button type='submit'>Logout</button>
+                        <button type="submit">Logout</button>
                     </form>
                 </li>
             <% } %>
         </ul>
-        
     </nav>
 </header>
 
