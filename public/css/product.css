@@ -1,3 +1,6 @@
+
+@import 'packages/bulma';
+
 .product-form {
     width: 20rem;
     max-width: 90%;
@@ -6,22 +9,43 @@
 }
 
 .product-item {
-    width: 20rem;
+    width: 25rem;
     max-width: 95%;
     margin: 1rem;
 }
 
 .product__title {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     text-align: center;
 }
 
 .product__price {
     text-align: center;
-    color: #4d4d4d;
+    color: #eee4e3;
     margin-bottom: 0.5rem;
 }
 
 .product__description {
     text-align: center;
 }
+
+.shimmer {
+    background: url('https://i.imgur.com/OUyfQnt.jpg');
+    background-size: cover;
+    position: relative;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: 'Rancho', cursive;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.shimmer::after {
+    
+    position: absolute;
+    -webkit-text-stroke-width: 10;
+    -webkit-text-stroke-color: rgba(black, 0.6);
+    left: 2px;
+    top: 2px
+
+    }

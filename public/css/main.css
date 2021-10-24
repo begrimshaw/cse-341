@@ -8,6 +8,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
+  background: #301515;
+  color: #fcfcfc;
 }
 
 main {
@@ -34,7 +36,7 @@ form {
 .main-header {
   width: 100%;
   height: 3.5rem;
-  background-color: #00695c;
+  background-color: #292d30;
   padding: 0 1.5rem;
   display: flex;
   align-items: center;
@@ -170,7 +172,8 @@ form {
 }
 
 .card {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 10px 10px rgb(0 0 0 / 26%);
+  background: #292d30;
 }
 
 .card__header,
@@ -194,7 +197,7 @@ form {
 }
 
 .card__actions {
-  padding: 1rem;
+  padding: 1 rem;
   text-align: center;
 }
 
@@ -208,7 +211,7 @@ form {
   padding: 0.25rem 1rem;
   text-decoration: none;
   font: inherit;
-  border: 1px solid #00695c;
+  border: 2px solid #00695c;
   color: #00695c;
   background: white;
   border-radius: 3px;
@@ -219,6 +222,7 @@ form {
 .btn:active {
   background-color: #00695c;
   color: white;
+  transition: 0.3s ease-out;
 }
 
 .btn.danger {
@@ -244,7 +248,7 @@ form {
 
 .user-message--error {
   border-color: red;
-  background: rgb(255, 176, 176);
+  background: rgb(246 222 222);
   color: red;
 }
 
